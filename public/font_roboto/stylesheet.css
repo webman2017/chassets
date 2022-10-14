@@ -1,0 +1,377 @@
+@font-face {
+    font-family: 'Roboto';
+    src: url('Roboto-BlackItalic.woff2') format('woff2'),
+        url('Roboto-BlackItalic.woff') format('woff');
+    font-weight: 900;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Roboto';
+    src: url('Roboto-Black.woff2') format('woff2'),
+        url('Roboto-Black.woff') format('woff');
+    font-weight: 900;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Robotob';
+    src: url('Roboto-Bold.woff2') format('woff2'),
+        url('Roboto-Bold.woff') format('woff');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Roboto';
+    src: url('Roboto-BoldItalic.woff2') format('woff2'),
+        url('Roboto-BoldItalic.woff') format('woff');
+    font-weight: bold;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Roboto';
+    src: url('Roboto-Italic.woff2') format('woff2'),
+        url('Roboto-Italic.woff') format('woff');
+    font-weight: normal;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Roboto';
+    src: url('Roboto-LightItalic.woff2') format('woff2'),
+        url('Roboto-LightItalic.woff') format('woff');
+    font-weight: 300;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Robotol';
+    src: url('Roboto-Light.woff2') format('woff2'),
+        url('Roboto-Light.woff') format('woff');
+    font-weight: 300;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Roboto';
+    src: url('Roboto-MediumItalic.woff2') format('woff2'),
+        url('Roboto-MediumItalic.woff') format('woff');
+    font-weight: 500;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Robotom';
+    src: url('Roboto-Medium.woff2') format('woff2'),
+        url('Roboto-Medium.woff') format('woff');
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Roboto_regular';
+    src: url('Roboto-Regular.woff2') format('woff2'),
+        url('Roboto-Regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Roboto';
+    src: url('Roboto-ThinItalic.woff2') format('woff2'),
+        url('Roboto-ThinItalic.woff') format('woff');
+    font-weight: 100;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Robotot';
+    src: url('Roboto-Thin.woff2') format('woff2'),
+        url('Roboto-Thin.woff') format('woff');
+    font-weight: 100;
+    font-style: normal;
+    font-display: swap;
+}
+
+body {
+    font-family: Roboto_regular;
+    background-color: #ccc;
+}
+
+.txt-h {
+    font-family: SF Thonburib;
+    font-size: 20px !important;
+    color: #333;
+}
+
+.txt-invoice {
+    font-family: Roboto;
+    font-size: 12px;
+}
+
+.txt-table {
+    font-family: Roboto;
+    font-size: 15px;
+}
+
+.box {
+    padding: 43px;
+}
+
+.txt-default {
+    font-size: 10px;
+}
+
+.header-bg {
+    background-color: rgba(101, 57, 192, 1);
+    color: #fff;
+}
+
+.txt-ht {
+    color: rgba(101, 57, 192, 1);
+}
+
+.bg-detail {
+    background-color: rgba(101, 57, 192, 0.1);
+    border-color: #fff !important;
+}
+
+.txt {
+    font-family: SF Thonburir;
+    font-size: 13px !important;
+    color: rgb(97, 113, 131);
+}
+
+.txt-quotation {
+    font-family: SF Thonburir;
+    font-size: 25px !important;
+    color: rgb(97, 113, 131);
+}
+
+.txt-sm {
+    font-family: Roboto;
+    font-size: 9px !important;
+    color: rgb(97, 113, 131);
+}
+
+
+
+.txt-modal {
+    font-family: Roboto_regular;
+    font-size: 12px !important;
+    color: #333;
+}
+
+.txt-h-modal {
+    font-family: Robotol;
+    font-size: 16px !important;
+    color: #000;
+}
+
+.txt-modal-txtbox {
+    font-family: Robotol;
+    font-size: 12px !important;
+    color: #333;
+}
+
+.txt-button {
+    font-family: SF Thonburir;
+    font-size: 12px !important;
+    border: 1px dashed rgb(180, 194, 213) !important;
+    background: rgb(247, 250, 255) !important;
+    color: rgb(97, 113, 131) !important;
+    padding: 5px;
+
+}
+
+.txt-button:hover {
+    font-family: SF Thonburir;
+    font-size: 12px !important;
+    border: 1px dashed rgb(180, 194, 213);
+    background: rgb(247, 250, 255);
+    color: rgb(97, 113, 131);
+
+}
+
+.bg {
+    background: rgb(115, 61, 217);
+}
+
+.txt-d {
+    font-family: SF Thonburir;
+    font-size: 13px !important;
+    color: #333;
+}
+
+.txt-d-form {
+    font-family: SF Thonburir;
+    font-size: 13px !important;
+    color: #333;
+}
+
+.btn-save {
+    background-color: rgb(242, 51, 119) !important;
+    color: #fff;
+    border: 1px solid rgb(242, 51, 119) !important;
+    font-family: SF Thonburir;
+
+}
+
+.btn-draft {
+    font-family: SF Thonburir;
+    background-color: rgb(255, 255, 255);
+    color: #777;
+    border: 1px solid #d5d4d4 !important;
+}
+
+.bg-section {
+    background: rgb(247, 250, 255) !important;
+    border: 0px !important;
+    margin-top: 0px !important;
+    margin-bottom: 9px;
+}
+
+input[type="text"],
+select.form-control {
+
+    background: rgb(247, 250, 255);
+    /* background: transparent; */
+    border: none;
+    border-bottom: 1px solid #d1cccc;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+    border-radius: 0;
+}
+
+input[type="text"]:focus,
+select.form-control:focus {
+    background: rgb(247, 250, 255);
+    -webkit-box-shadow: none;
+    box-shadow: none;
+}
+
+
+
+
+
+.modal.fade .modal-dialog {
+    -webkit-transform: translate(0, 100%);
+    -ms-transform: translate(0, 100%);
+    -o-transform: translate(0, 100%);
+    transform: translate(0, 100%);
+}
+
+#sig-canvas {
+    border: 2px dotted #CCCCCC;
+    border-radius: 15px;
+    cursor: crosshair;
+}
+
+#total_amount {
+    font-family: SF Thonburib;
+    ;
+    font-size: 25px;
+
+}
+
+.number {
+    font-family: SF Thonburir;
+    font-size: 10px;
+}
+
+.total_txt {
+    font-family: SF Thonburir;
+    font-size: 10px;
+}
+
+.signature_txt {
+    font-family: SF Thonburir;
+    font-size: 10px;
+}
+
+.signature_btn {
+    font-size: 12px;
+}
+
+.dropdown-item {
+    display: block;
+    width: 100%;
+    padding: 0.25rem 1.5rem;
+    clear: both;
+    font-weight: 400;
+    color: #212529;
+    text-align: inherit;
+    white-space: nowrap;
+    background-color: transparent;
+    border: 0;
+}
+
+.dropdown-item {
+    display: block;
+    width: 100%;
+    padding: 0.25rem 1.5rem;
+    clear: both;
+    font-weight: 400;
+    color: #212529;
+    text-align: inherit;
+    white-space: nowrap;
+    background-color: transparent;
+    border: 0;
+    border: 1px solid #e3dede !important;
+    border-radius: 5px;
+    margin-bottom: 5px;
+    background-color: #fafafa !important;
+}
+
+.dropdown-menu {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    z-index: 1000;
+    display: none;
+    float: left;
+    min-width: 10rem;
+    padding: 0.5rem 0;
+    margin: 0.125rem 0 0;
+    font-size: 1rem;
+    color: #212529;
+    text-align: left;
+    list-style: none;
+    background-color: #fff;
+    background-clip: padding-box;
+    border: 1px solid rgba(0, 0, 0, .15);
+    border-radius: 0.25rem;
+    padding: 10px !important;
+}
+
+.myClass {
+    color: red;
+    width: 200px;
+}
+
+.myClass option {
+    background: #000;
+    color: #fff;
+    padding: 5px;
+    border-radius: 5px;
+}
+
+.dropdown-item.active,
+.dropdown-item:active {
+    color: #000 !important;
+    text-decoration: none;
+    background-color: #007bff;
+}

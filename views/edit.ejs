@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1"
+      crossorigin="anonymous"
+    />
+    <link href="styles.css" rel="stylesheet" />
+    <link href="../font_roboto/stylesheet.css" rel="stylesheet" />
+    <title>Quotation detail</title>
+  </head>
+  <body>
+    <% if (user) { %>
+    <div class="col-lg-8 col-12 mx-auto mt-4">
+      <div class="card">
+        <div class="card-body">
+          <div class="row">
+            <div class="col-6">
+              <img src="../1664953679892.png" width="90" />
+            </div>
+            <div class="col-6 text-end txt-quotation">Quotation</div>
+          </div>
+
+          <div class="row bg-light mb-5 p-2">
+            <div class="col-6">
+              <div class="txt-sm">CLIENT NAME</div>
+              <div class="txt-d"><%= user.customer_name %></div>
+              <div class="txt-sm">QUOTATION DATE</div>
+              <div class="txt-d"><%= user.created_at %></div>
+              <div class="row">
+                <div class="col-6">
+                  <div class="txt-sm">CLIENT ID</div>
+                  <div class="txt-d"><%= user.customer_id %></div>
+                </div>
+                <div class="col-6">
+                  <div class="txt-sm">QUOTATION ID</div>
+                  <div class="txt-d"><%= user.quotation_id %></div>
+                </div>
+              </div>
+            </div>
+            <div class="col-6 txt-sm">
+              <div class="txt-sm">CLIENT DETAIL</div>
+
+              <div class="txt-d"><%= user.customer_email %></div>
+              <div class="txt-d"><%= user.customer_mobile %></div>
+              <div class="txt-d"><%= user.customer_address %></div>
+            </div>
+          </div>
+
+          <form action="/update" method="POST">
+            <input id="id" name="id" value="<%= user.id %>" hidden />
+          </form>
+
+          <table class="table txt-d">
+            <thead>
+              <tr class="bg-light">
+                <td>Item</td>
+                <td>type</td>
+                <td>Material</td>
+                <td>Add On</td>
+                <td>Amount</td>
+              </tr>
+            </thead>
+          </table>
+        </div>
+      </div>
+    </div>
+    <% } %>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>

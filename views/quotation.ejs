@@ -1,0 +1,178 @@
+<%- include('layout.ejs'); %>
+    <div id="layoutSidenav">
+      <div id="layoutSidenav_nav">
+        <%- include('nav.ejs'); %>
+      </div>
+      <div id="layoutSidenav_content">
+        <main>
+          <div class="container-fluid px-4">
+            <h5 class="mt-4 txt-h">Quotations</h5>
+         
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="https://cdn.datatables.net/1.10.22/css/dataTables.bootstrap5.min.css"
+    />
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css"
+      integrity="sha512-HK5fgLBL+xu6dm/Ii3z4xhlSUyZgTT9tuc/hSrtw6uzJOvgRr2a9jyxxT1ely+B+xFAmJKVSTbpM/CuL7qxO8w=="
+      crossorigin="anonymous"
+    />
+  
+  </head>
+  <body>
+   
+
+    <div class="container">
+        <div class="row mb-3">
+        <div class="text-end">
+   <a href="/save_quotation" class="btn btn-danger btn-sm txt-invoice"
+        ><i class="fas fa-plus-square"></i
+      > Create New Quotation</a>
+        </div>
+        </div>
+   
+      <table
+        id="users"
+        class="table  text-center txt-table"
+      >
+        <thead>
+          <tr>
+            <th scope="col">Date</th>
+              <th scope="col">Quotation Number</th>
+            <th scope="col">Quoted To</th>
+            <th scope="col">Amount</th>
+          </tr>
+        </thead>
+        <!-- <tbody>       
+        </tbody> -->
+      </table>
+    </div>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      type="text/javascript"
+      language="javascript"
+      src="https://code.jquery.com/jquery-3.5.1.js"
+    ></script>
+    <script
+      type="text/javascript"
+      language="javascript"
+      src="https://cdn.datatables.net/1.10.22/js/jquery.dataTables.min.js"
+    ></script>
+    <script
+      type="text/javascript"
+      language="javascript"
+      src="https://cdn.datatables.net/1.10.22/js/dataTables.bootstrap5.min.js"
+    ></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@10"></script>
+
+    <script>
+      //const datos = <%- JSON.stringify(data) %>;
+      //console.log(datos);
+      $("#users").DataTable({
+        ajax: {
+          url: "/getQuotation",
+          dataSrc: "",
+        },
+        columns: [
+          { data: "created_at" },
+          { data: "quotation_id" },
+          { data: "customer_name" },
+          {
+            data: null,
+            render: function (data) {
+              return (
+                '<a href="/open/' +
+                data.quotation_id +
+                '"class="btn btn-light btn-sm"><i class="fa fa-external-link" aria-hidden="true"></i></a>'
+                +'<a href="/edit/' +
+                data.quotation_id +
+                '"class="btn btn-light btn-sm"><i class="fas fa-edit"></i></a><a onclick="confirmar(' +
+                data.id +
+                ')" class="btn btn-light"><i class="fas fa-trash-alt"></i></a><a href="" class="btn btn-light"><i class="fa-solid fa-clone"></i></a>'
+              );
+            },
+          },
+        ],
+         order: [[1, 'desc']],
+        pageLength: 5,
+        lengthMenu: [
+          [5, 10, 20, -1],
+          [5, 10, 20, "All"],
+        ],
+      });
+
+      function confirmar(id) {
+        Swal.fire({
+          title: "ต้องการลบใบเสนอราคาเลขที่ : " + id + "?",
+          icon: "warning",
+          showCancelButton: true,
+          confirmButtonColor: "#d33",
+          cancelButtonColor: "#6c757d",
+          confirmButtonText: "Confirm",
+        }).then((result) => {
+          if (result.isConfirmed) {
+            window.location = "/delete/" + id;
+          }
+        });
+      }
+    </script>
+  </body>
+</html>
+
+            </div>
+
+
+
+
+
+
+
+
+        </main>
+        <footer class="py-4 bg-light mt-auto">
+          <div class="container-fluid px-4">
+            <div
+              class="d-flex align-items-center justify-content-between small"
+            >
+              <div class="text-muted">xx</div>
+              <div>
+               
+              </div>
+            </div>
+          </div>
+        </footer>
+      </div>
+    </div>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+      crossorigin="anonymous"
+    ></script>
+    <script src="js/scripts.js"></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.8.0/Chart.min.js"
+      crossorigin="anonymous"
+    ></script>
+    <script src="assets/demo/chart-area-demo.js"></script>
+    <script src="assets/demo/chart-bar-demo.js"></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/simple-datatables@latest"
+      crossorigin="anonymous"
+    ></script>
+    <script src="js/datatables-simple-demo.js"></script>
+
+
+  </body>
+</html>
